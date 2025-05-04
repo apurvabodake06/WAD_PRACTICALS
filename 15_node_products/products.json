@@ -1,0 +1,15 @@
+{
+    "products": [
+      {
+        "name": "Laptop",
+        "price": "$1000",
+        "image": "https://via.placeholder.com/150"
+      },
+      {
+        "name": "Phone",
+        "price": "$500",
+        "image": "https://via.placeholder.com/150"
+      }
+    ]
+  }
+  
