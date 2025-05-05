@@ -27,8 +27,7 @@
         .then(res => res.json())
         .then(data => data.employees.forEach(employee => {
             document.getElementById('result').innerHTML +=
-            `
-             <div id = employeeinfo>
+            `<div id = employeeinfo>
                 <img src=${employee.image} alt = ${employee.name}><br>
              ${employee.name}<br>
               ${employee.designation}<br>

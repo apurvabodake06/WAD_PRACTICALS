@@ -47,6 +47,18 @@ body {
     object-fit: cover;
     border-radius: 8px;
   }
+nav{
+  background-color: #915f5f;
+  color: white;
+  text-align: center;
+}
+  nav a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    margin: 5px;
+    
+  }
   
   footer {
     text-align: center;

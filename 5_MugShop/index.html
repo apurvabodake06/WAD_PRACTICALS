@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mug Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container py-4">
+  <h2 class="text-center mb-4">Mugs Store</h2>
+
+  <!-- Category Filter -->
+  <div class="d-flex justify-content-end mb-3">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Filter by Category
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#" onclick="filter('all')">All</a></li>
+        <li><a class="dropdown-item" href="#" onclick="filter('bestseller')">Bestseller</a></li>
+        <li><a class="dropdown-item" href="#" onclick="filter('new')">New</a></li>
+        <li><a class="dropdown-item" href="#" onclick="filter('premium')">Premium</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="row" id="productGrid">
+    <!-- Card 1 -->
+    <div class="col-md-4 mb-4 product-card bestseller">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mug">
+        <div class="card-body">
+          <h5 class="card-title">Ceramic Mug 11oz</h5>
+          <p class="card-text">From USD 4.24</p>
+          <span class="badge bg-warning text-dark">Bestseller</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4 mb-4 product-card new">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mug">
+        <div class="card-body">
+          <h5 class="card-title">Black Mug 11oz</h5>
+          <p class="card-text">From USD 5.88</p>
+          <span class="badge bg-primary">New</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4 mb-4 product-card premium">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mug">
+        <div class="card-body">
+          <h5 class="card-title">Accent Color Mug</h5>
+          <p class="card-text">From USD 5.52</p>
+          <span class="badge bg-success">Premium</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more cards as needed -->
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function filter(category) {
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.classList.contains(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
